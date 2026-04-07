@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 기초 실습</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="card">
+            <section class="card-section">
+                <h2 class="section-title">1. 클릭 이벤트 테스트</h2>
+                <button type="button" id="clickBtn" class="btn btn--green">클릭하세요!</button>
+                <p id="clickMessage" class="hint" aria-live="polite"></p>
+            </section>
+
+            <hr class="divider">
+
+            <section class="card-section">
+                <h2 class="section-title">2. 실시간 입력 감지</h2>
+                <label class="sr-only" for="liveInput">실시간 입력</label>
+                <input
+                    type="text"
+                    id="liveInput"
+                    class="text-input"
+                    placeholder="여기에 타이핑 해보세요"
+                    autocomplete="off"
+                >
+                <div id="liveOutput" class="live-output" aria-live="polite">
+                    콘솔을 확인하거나 여기에 출력됨
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <section class="card-section">
+                <h2 class="section-title">3. 폼 제출 (FormData)</h2>
+                <form id="demoForm" class="demo-form" novalidate>
+                    <label class="sr-only" for="userName">이름</label>
+                    <input
+                        type="text"
+                        id="userName"
+                        name="name"
+                        class="text-input"
+                        placeholder="이름"
+                        autocomplete="name"
+                    >
+                    <label class="sr-only" for="userEmail">이메일</label>
+                    <input
+                        type="email"
+                        id="userEmail"
+                        name="email"
+                        class="text-input"
+                        placeholder="이메일"
+                        autocomplete="email"
+                    >
+                    <button type="submit" class="btn btn--blue">데이터 제출</button>
+                </form>
+                <pre id="formResult" class="form-result" hidden></pre>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
