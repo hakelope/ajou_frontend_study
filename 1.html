@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 레이아웃</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: system-ui, sans-serif;
+        }
+        header {
+            padding: 1rem 1.5rem;
+            background: #1a1a2e;
+            color: #eee;
+        }
+        .layout {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+        main {
+            flex: 1 1 320px;
+            padding: 1.5rem;
+            background: #f5f5f7;
+        }
+        aside {
+            flex: 0 0 220px;
+            padding: 1.5rem;
+            background: #e8e8ed;
+        }
+        footer {
+            padding: 1rem 1.5rem;
+            background: #16213e;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>안녕하세요</h1>
-    <p>프론트엔드에서살아남아보겟읍니다.</p>
+    <header>
+        <h1>세상에서가장멋진웹사이트</h1>
+        <p>(진짜임)</p>
+    </header>
+
+    <div class="layout">
+        <main>
+            <h2>엄청중요한메인콘텐츠</h2>
+            <p>여기에 뭔갈 써야되는데 막상 쓰려니 뭘 써야될지 모르겟습니다.</p>
+        </main>
+        <aside>
+            <h2>메모하는곳</h2>
+            <p>코넬식 노트필기가 생각납니다.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>© 김기륭withCursorAI</p>
+    </footer>
 </body>
 </html>
